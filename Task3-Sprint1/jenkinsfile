@@ -30,7 +30,7 @@ pipeline {
             when {
             //  branch 'development'
             expression {
-                env.TERRAFORM_ACTION != 'DEPLOY'
+                env.TERRAFORM_ACTION == 'DESTROY'
                  }
             }
             steps {
