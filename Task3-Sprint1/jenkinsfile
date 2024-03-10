@@ -6,8 +6,7 @@ pipeline {
         TERRAFORM_ACTION = 'DEPLOY'
       }
     agent any
-    stages {
-        
+    stages {  
         stage("Create an EKS Cluster") {
             when {
              branch 'development'
@@ -26,7 +25,6 @@ pipeline {
                 }
             }
         }
-
         stage("Create an EKS Cluster") {
             when {
              branch 'development'
