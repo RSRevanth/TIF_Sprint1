@@ -17,7 +17,7 @@ pipeline {
             }
             steps {
                 script {
-                    dir('TIF-Sprint1/Task3-Sprint1') {
+                    dir('TIF_Sprint1/Task3-Sprint1') {
                         sh "terraform init"
                         sh "terraform validate"
                         sh "terraform plan"
@@ -37,7 +37,7 @@ pipeline {
             steps {
                 script {
                     dir('TIF_Sprint1/Task3-Sprint1') {
-                        sh "terraform apply --auto-approve"
+                        sh "terraform destroy --auto-approve"
                     }
                 }
             }
