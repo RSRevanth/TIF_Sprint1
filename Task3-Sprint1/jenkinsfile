@@ -36,6 +36,7 @@ pipeline {
             steps {
                 script {
                     dir('Task3-Sprint1') {
+                        sh "terraform init"
                         sh "terraform destroy --auto-approve"
                     }
                 }
