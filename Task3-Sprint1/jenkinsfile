@@ -25,7 +25,7 @@ pipeline {
                 }
             }
         }
-        stage("Create an EKS Cluster") {
+        stage("Destroy an EKS Cluster") {
             when {
              branch 'development'
             expression {
