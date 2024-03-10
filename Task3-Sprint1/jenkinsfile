@@ -9,7 +9,7 @@ pipeline {
     stages {  
         stage("Create an EKS Cluster") {
             when {
-             branch 'development'
+            //  branch 'development'
             expression {
                 env.TERRAFORM_ACTION == 'DEPLOY'
                  }
@@ -27,7 +27,7 @@ pipeline {
         }
         stage("Destroy an EKS Cluster") {
             when {
-             branch 'development'
+            //  branch 'development'
             expression {
                 env.TERRAFORM_ACTION != 'DEPLOY'
                  }
