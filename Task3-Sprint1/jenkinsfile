@@ -18,6 +18,7 @@ pipeline {
                 script {
                     dir('TIF_Sprint1/Task3-Sprint1') {
                         sh "terraform init"
+                        sh "terraform fmt"
                         sh "terraform validate"
                         sh "terraform plan"
                         sh "terraform apply --auto-approve"
