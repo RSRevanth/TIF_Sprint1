@@ -94,7 +94,6 @@ resource "aws_instance" "web-1" {
         /etc/apt/sources.list.d/jenkins.list > /dev/null
         sudo apt-get update
         sudo apt-get install jenkins -y
-
         # install git
         sudo apt install git -y
         # install terraform
