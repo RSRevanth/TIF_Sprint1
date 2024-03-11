@@ -15,3 +15,4 @@ variable "environment" { default = "dev" }
 variable "instance_type" {}
 variable "service_ports" {}
 variable "availability_zone" {}
+
