@@ -1,7 +1,7 @@
 ###### root/main.tf
 
 module "eks" {
-  source                  = "./modules/eks"
+  source                  = "./modules/EKS"
   aws_public_subnet       = module.vpc.aws_public_subnet
   vpc_id                  = module.vpc.vpc_id
   cluster_name            = "module-eks-${random_string.suffix.result}"
@@ -17,7 +17,7 @@ module "eks" {
 }
 
 module "vpc" {
-  source                  = "./modules/vpc"
+  source                  = "./modules/VPC"
   tags                    = "tech-it-project-31"
   instance_tenancy        = "default"
   vpc_cidr                = "10.0.0.0/16"
