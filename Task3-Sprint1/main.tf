@@ -1,7 +1,7 @@
 ###### root/main.tf
 
 module "eks" {
-  source                  = "./modules/EKS"
+  source                  = "./modules/eks"
   aws_public_subnet       = module.vpc.aws_public_subnet
   vpc_id                  = module.vpc.vpc_id
   cluster_name            = "module-eks-${random_string.suffix.result}"
@@ -12,13 +12,13 @@ module "eks" {
   scaling_desired_size    = 1
   scaling_max_size        = 1
   scaling_min_size        = 1
-  instance_types          = ["t3.small"]
+  instance_types          = ["t3.medium"]
   key_pair                = "LaptopKey"
 }
 
 module "vpc" {
-  source                  = "./modules/VPC"
-  tags                    = "tech-it-project-3"
+  source                  = "./modules/vpc"
+  tags                    = "tech-it-project-31"
   instance_tenancy        = "default"
   vpc_cidr                = "10.0.0.0/16"
   access_ip               = "0.0.0.0/0"
